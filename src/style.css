@@ -1,0 +1,86 @@
+/* === Base Colors === */
+:root {
+  --bg-main: #e6e6fa; /* Lavender Mist */
+  --bg-secondary: #ccccff; /* Lavender Blue */
+  --text-primary: #333333; /* Charcoal */
+  --text-secondary: #555555; /* Slate Gray */
+  --accent: #9370db; /* Soft Purple */
+  --btn-bg: #6a5acd; /* Deep Purple */
+  --btn-hover: #9932cc; /* Dark Orchid */
+  --border-color: #c4c3d0; /* Lavender Gray */
+}
+
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Layout Utility Classes === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Sections === */
+.section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+/* === Navigation === */
+.navbar {
+  background-color: var(--bg-secondary);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+  margin-right: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}

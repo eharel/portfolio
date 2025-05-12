@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Eli Harel – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website, built from scratch using **React**, **Vite**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+This project showcases who I am, what I’ve built, and where I’m heading as a frontend developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 About Me
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+I'm Eli Harel, a frontend-focused developer with a strong foundation in computer science. I hold a Magna Cum Laude CS degree from Israel and recently relocated to the U.S. I’ve spent the past few years sharpening my skills in **React**, **JavaScript**, **Java**, and **C#**, and now I'm actively looking for my first professional developer role.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+While I don’t yet have formal industry experience, I’ve built several personal projects, and I’m passionate about writing clean, maintainable code with a strong user focus.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- **Framework:** [React](https://reactjs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Routing:** [React Router](https://reactrouter.com/)
+- **Deployment:** [Vercel](https://vercel.com/) (planned)
+
+---
+
+## 📁 Folder Structure
+
+```bash
+src/
+├── assets/           # Static images, icons, etc.
+├── components/       # Reusable UI elements (Navbar, Footer, etc.)
+├── pages/            # Route-level views (Home, About, Projects, etc.)
+├── App.jsx           # Main app wrapper
+├── main.jsx          # Entry point
+└── index.css         # Tailwind + global styles
 ```
