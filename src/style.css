@@ -1,7 +1,7 @@
 /* === Base Colors === */
 :root {
   --bg-main: #e6e6fa; /* Lavender Mist */
-  --bg-secondary: #ccccff; /* Lavender Blue */
+  --bg-secondary: #8282d8; /* Lavender Blue */
   --text-primary: #333333; /* Charcoal */
   --text-secondary: #555555; /* Slate Gray */
   --accent: #9370db; /* Soft Purple */
@@ -71,16 +71,186 @@ a:hover {
 /* === Navigation === */
 .navbar {
   background-color: var(--bg-secondary);
-  padding: 1rem 2rem;
-  border-bottom: 1px solid var(--border-color);
+  width: 100%; /* Ensure full width */
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  padding: 1rem 0; /* Remove side padding */
+  display: flex;
+  justify-content: center; /* Center the navbar items */
 }
 
-.nav-link {
-  margin-right: 1.5rem;
-  color: var(--text-primary);
-  font-weight: 500;
+.navbar-list {
+  display: flex;
+  justify-content: space-around; /* Spread items with moderate spacing */
+  align-items: center; /* Vertically align items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 80%; /* Adjust width to control spacing */
 }
 
-.nav-link:hover {
+.navbar-item {
+  margin: 0; /* Remove unnecessary margin */
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+/* === Footer === */
+.footer {
+  background-color: var(--bg-secondary);
+  color: white;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the content */
+  align-items: center; /* Vertically center the content */
+  padding: 1rem; /* Adjust padding for spacing */
+  font-size: 1rem;
+  border-top: 1px solid var(--border-color);
+  position: fixed; /* Fix the footer to the bottom of the screen */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  margin: 0 auto; /* Center the footer content */
+  flex-wrap: wrap; /* Allow content to wrap if it overflows */
+  gap: 1rem; /* Add spacing between wrapped items */
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-heart {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem; /* Add spacing between the icons */
+  margin-right: 2rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem; /* Adjust icon size */
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00bcd4; /* Change color on hover */
+}
+
+/* === Projects Container === */
+.projects-container {
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Up to 3 items per row */
+  gap: 2rem; /* Increase spacing between cards */
+  justify-content: center; /* Center the grid items */
+  padding: 2rem; /* Add padding around the container */
+}
+
+/* === Project Card === */
+.project-card {
+  width: 300px; /* Make the card bigger */
+  height: 200px; /* Adjust height to match the new size */
+  background-color: var(--bg-secondary); /* Background color */
+  color: white; /* Default text color */
+  border-radius: 12px; /* Slightly larger rounded corners */
+  overflow: hidden; /* Ensure content stays within bounds */
+  position: relative; /* For positioning child elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effects */
+  margin: 1rem; /* Add more spacing around the card */
+}
+
+.project-card:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  opacity: 0.85; /* Faint fade-out effect */
+}
+
+.project-card p {
+  position: absolute;
+  top: 50%; /* Position text vertically at the center */
+  left: 50%; /* Position text horizontally at the center */
+  transform: translate(-50%, -50%); /* Center the text using transform */
+  font-size: 1rem; /* Default font size */
+  font-weight: bold;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, font-size 0.3s ease; /* Smooth fade-in and size change */
+  text-align: center; /* Ensure text is centered */
+}
+
+.project-card:hover p {
+  opacity: 1; /* Show text on hover */
+  font-size: 1.5rem; /* Make the text larger on hover */
+}
+
+.project-image {
+  width: 100%; /* Make the image take up the full width of the parent */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* === Project Modal === */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.project-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.project-modal a {
+  display: inline-block;
+  margin-top: 1rem;
   color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-modal a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "YelpCamp",
+    "description": "Rate camps across the States.",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/YelpCamp",
+    "liveLink": "",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": ""
+  },
+  {
+    "id": "2",
+    "title": "Quizzy",
+    "description": "Test knowledge on different subjects.",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/quizzy",
+    "liveLink": "https://quizzy-dun.vercel.app/",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "images-projects/quizzy.png"
+  },
+  {
+    "id": "3",
+    "title": "Traveler",
+    "description": "Keep track of your travels.",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/traveler",
+    "liveLink": "",
+    "technologies": ["HTML", "CSS", "JavaScript", "React", "React Router"],
+    "image": ""
+  }
+]
