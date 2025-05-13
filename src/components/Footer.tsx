@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <p className="footer-text">
         © 2025 Eli Harel. Built with <span className="footer-heart">♥</span>{" "}
-        using React, Vite, and the lovely GitHub Copilot.
+        using React and Vite.
       </p>
       <div className="footer-links">
         <a

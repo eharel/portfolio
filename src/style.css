@@ -71,12 +71,22 @@ a:hover {
 /* === Navigation === */
 .navbar {
   background-color: var(--bg-secondary);
-  width: 100%; /* Ensure full width */
-  position: fixed; /* Fix the navbar to the top */
+  color: white;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space out the content */
+  align-items: center; /* Vertically center the content */
+  font-size: 1rem;
+  border-top: 1px solid var(--border-color);
+  position: fixed; /* Fix the navbar to the top of the screen */
   top: 0;
-  padding: 1rem 0; /* Remove side padding */
-  display: flex;
-  justify-content: center; /* Center the navbar items */
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  height: 50px; /* Set a fixed height */
+  margin: 0 auto; /* Center the navbar content */
+  flex-wrap: wrap; /* Allow content to wrap if it overflows */
+  gap: 1rem; /* Add spacing between wrapped items */
+  bottom: 0;
+  left: 0;
 }
 
 .navbar-list {
