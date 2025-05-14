@@ -12,6 +12,12 @@ interface SkillCategory {
   skills: Skill[];
 }
 
+interface SkillNode {
+  name: string;
+  children?: SkillNode[];
+  value?: number;
+}
+
 interface SkillTreeProps {
   data: Record<string, SkillCategory>;
 }
@@ -22,8 +28,7 @@ export default function SkillTree({ data }: SkillTreeProps) {
   useEffect(() => {
     if (!svgRef.current) return;
 
-    // Transform the data into a hierarchical structure
-    const hierarchicalData = {
+    const hierarchicalData: SkillNode = {
       name: "Skills",
       children: Object.values(data).map((category) => ({
         name: category.name,
@@ -34,12 +39,12 @@ export default function SkillTree({ data }: SkillTreeProps) {
       })),
     };
 
-    const width = 800;
+    const width = 1000;
     const height = 600;
-    const margin = { top: 20, right: 90, bottom: 20, left: 90 };
+    const margin = { top: 20, right: 200, bottom: 20, left: 200 };
 
     // Create the tree layout
-    const treeLayout = tree<any>().size([
+    const treeLayout = tree<SkillNode>().size([
       height - margin.top - margin.bottom,
       width - margin.right - margin.left,
     ]);
@@ -102,7 +107,7 @@ export default function SkillTree({ data }: SkillTreeProps) {
       );
       text.textContent = node.data.name;
       text.setAttribute("dy", "0.31em");
-      text.setAttribute("x", node.children ? -12 : 12);
+      text.setAttribute("x", String(node.children ? -20 : 20));
       text.setAttribute("text-anchor", node.children ? "end" : "start");
       nodeGroup.appendChild(text);
 
@@ -116,7 +121,7 @@ export default function SkillTree({ data }: SkillTreeProps) {
         ref={svgRef}
         width="100%"
         height="600"
-        viewBox="0 0 800 600"
+        viewBox={`0 0 1000 600`}
         preserveAspectRatio="xMidYMid meet"
       />
     </div>
