@@ -45,7 +45,61 @@
 /* Skill Tree Styles */
 .skillTree {
   width: 100%;
-  height: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.nodeCircle {
+  transition: r 0.2s ease, fill 0.2s ease;
+}
+
+.nodeHover {
+  r: 12;
+  fill: var(--btn-hover) !important;
+}
+
+.nodeText {
+  font-size: 0.9rem;
+  fill: var(--text-primary);
+  transition: font-size 0.2s ease;
+}
+
+.node:hover .nodeText {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.link {
+  transition: stroke-width 0.2s ease;
+}
+
+.node:hover + .link {
+  stroke-width: 2px;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  font-size: 0.9rem;
+  z-index: 1000;
+  display: none;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.tooltip strong {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .node text {
