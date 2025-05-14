@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaGoodreads } from "react-icons/fa";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -102,6 +102,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
+              title="Visit my GitHub Profile"
             >
               <FaGithub size={24} />
             </a>
@@ -110,8 +111,18 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
+              title="Connect with me on LinkedIn"
             >
               <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://www.goodreads.com/user/show/104343357-eli-harel"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Goodreads Profile"
+              title="Check out my reading list on Goodreads"
+            >
+              <FaGoodreads size={24} />
             </a>
           </div>
         </div>
