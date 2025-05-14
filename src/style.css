@@ -212,20 +212,24 @@ a:hover {
 
 .project-card p {
   position: absolute;
-  top: 50%; /* Position text vertically at the center */
-  left: 50%; /* Position text horizontally at the center */
-  transform: translate(-50%, -50%); /* Center the text using transform */
-  font-size: 1rem; /* Default font size */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Add width to control text wrapping */
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  font-size: 1rem;
   font-weight: bold;
-  opacity: 0; /* Hidden by default */
-  transition: transform 0.3s ease, opacity 0.3s ease, font-size 0.3s ease; /* Smooth fade-in and size change */
-  text-align: center; /* Ensure text is centered */
-  z-index: 2; /* Ensure text appears above the dark overlay */
+  opacity: 0;
+  transition: all 0.3s ease; /* Simplified transition */
+  text-align: center;
+  z-index: 2;
+  line-height: 1.2; /* Control line height for multi-line text */
 }
 
 .project-card:hover p {
-  opacity: 1; /* Show text on hover */
-  font-size: 1.5rem; /* Make the text larger on hover */
+  opacity: 1;
+  font-size: 1.5rem;
 }
 
 .project-image {

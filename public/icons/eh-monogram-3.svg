@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="#6a5acd"/>
+  <!-- Bracket-inspired EH -->
+  <path d="M10 8v16h3v-7h6v7h3v-16h-3v6h-6v-6z" fill="white"/>
+  <path d="M22 8v3h-3v-3h3zM22 13v6h-3v-6h3zM22 21v3h-3v-3h3z" fill="white"/>
+</svg> 

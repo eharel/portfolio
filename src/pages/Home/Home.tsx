@@ -1,3 +1,6 @@
+import styles from "./Home.module.css";
+import { FaRegFileAlt } from "react-icons/fa";
+
 export default function Home() {
   return (
     <section className="section" id="home">
@@ -18,6 +21,18 @@ export default function Home() {
         Welcome — feel free to explore my projects, read more about me, or get
         in touch!
       </p>
+
+      <div className={styles.buttonContainer}>
+        <a
+          href="/Resume - Eli Harel.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeButton}
+        >
+          <FaRegFileAlt className={styles.buttonIcon} />
+          See My Resume
+        </a>
+      </div>
     </section>
   );
 }

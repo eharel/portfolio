@@ -1,0 +1,90 @@
+.visualizationToggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.toggleButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-secondary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.toggleButton:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.toggleButton.active {
+  background-color: var(--btn-bg);
+  opacity: 1;
+}
+
+.visualizationContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Radar Chart Styles */
+.radarChart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Skill Tree Styles */
+.skillTree {
+  width: 100%;
+  height: 100%;
+}
+
+.node text {
+  font-size: 0.9rem;
+  fill: var(--text-primary);
+}
+
+.node circle {
+  fill: var(--accent);
+  stroke: var(--bg-secondary);
+  stroke-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.node:hover circle {
+  fill: var(--btn-hover);
+  transform: scale(1.2);
+}
+
+.node:hover text {
+  font-weight: bold;
+}
+
+.skillTooltip {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skillTooltip p {
+  margin: 4px 0;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.skillTooltip .categoryLabel {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-style: italic;
+}
