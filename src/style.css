@@ -11,11 +11,25 @@
 }
 
 /* === Global Styles === */
+html,
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
   font-family: system-ui, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -136,24 +150,32 @@ a:hover {
 .footer {
   background-color: var(--bg-secondary);
   color: white;
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space out the content */
-  align-items: center; /* Vertically center the content */
-  padding: 1rem; /* Adjust padding for spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
   font-size: 1rem;
   border-top: 1px solid var(--border-color);
-  position: fixed; /* Fix the footer to the bottom of the screen */
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Ensure it spans the full width */
-  margin: 0 auto; /* Center the footer content */
-  flex-wrap: wrap; /* Allow content to wrap if it overflows */
-  gap: 1rem; /* Add spacing between wrapped items */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  /* max-width: 1280px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-text {
   margin: 0;
+  margin-left: 2%;
+  margin-right: 0.5rem;
   font-size: 1rem;
+  text-align: left;
 }
 
 .footer-heart {
@@ -163,19 +185,20 @@ a:hover {
 
 .footer-links {
   display: flex;
-  gap: 1rem; /* Add spacing between the icons */
+  gap: 1rem;
+  margin-left: 1rem;
   margin-right: 2rem;
 }
 
 .footer-link {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem; /* Adjust icon size */
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #00bcd4; /* Change color on hover */
+  color: #00bcd4;
 }
 
 /* === Projects Container === */
@@ -264,31 +287,120 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000; /* Ensure it appears above other elements */
+  align-items: center;
+  z-index: 1000;
 }
 
 .project-modal-content {
   background-color: white;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  max-width: 600px;
   width: 90%;
-  max-width: 500px;
-  text-align: center;
   position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--text-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.project-modal-close:hover {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.project-modal-description {
+  text-align: left;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Add styles for HTML elements within the description */
+.project-modal-description p {
+  margin: 0.75rem 0;
+}
+
+.project-modal-description ul,
+.project-modal-description ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.project-modal-description li {
+  margin: 0.5rem 0;
+}
+
+.project-modal-description strong,
+.project-modal-description b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-modal-description em,
+.project-modal-description i {
+  font-style: italic;
+}
+
+.project-modal-description a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-modal-description a:hover {
+  text-decoration: underline;
+}
+
+.project-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.project-modal-github,
+.project-modal-live {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-modal-github:hover,
+.project-modal-live:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.project-modal h2 {
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
 }
 
 .project-modal a {

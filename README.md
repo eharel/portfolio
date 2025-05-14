@@ -48,7 +48,7 @@ src/
 │   ├── Home/        # Landing page
 │   ├── Projects/    # Project showcase
 │   └── Skills/      # Skills visualization
-├── constants/       # Configuration and data files
+├── data/           # JSON data files for skills and projects
 ├── types/          # TypeScript type definitions
 ├── App.tsx         # Main app component
 ├── main.tsx        # Entry point

@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./Skills.module.css";
 import RadarChart from "./RadarChart";
 import SkillTree from "./SkillTree";
-import skillsData from "../../constants/skills.json";
+import skillsData from "../../data/skills.json";
 
 export default function Skills() {
   const [visualizationType, setVisualizationType] = useState<"radar" | "tree">(

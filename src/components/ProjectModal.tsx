@@ -1,5 +1,7 @@
 import type { Project } from "../types";
 import "../style.css";
+import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface ProjectModalProps {
   project: Project | null; // The selected project or null
@@ -16,10 +18,30 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           &times;
         </button>
         <h2>{project.title}</h2>
-        <p>{project.description}</p>
-        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-          View Live Project
-        </a>
+        <div
+          className="project-modal-description"
+          dangerouslySetInnerHTML={{ __html: project.description }}
+        />
+        <div className="project-modal-footer">
+          <a
+            href={project.gitHubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-modal-github"
+            title="View Source Code on GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-modal-live"
+            title="Open Live Project"
+          >
+            <FaExternalLinkAlt />
+          </a>
+        </div>
       </div>
     </div>
   );

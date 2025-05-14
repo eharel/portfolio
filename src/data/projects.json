@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "YelpCamp",
+    "description": "<p><strong>YelpCamp</strong> is a full-stack web application that allows users to explore, create, and review campgrounds across the United States. Built with <strong>Express.js</strong> and <strong>MongoDB</strong>, it implements full CRUD functionality, user authentication via <strong>Passport.js</strong>, and dynamic page rendering using <strong>EJS</strong>. Image uploads are handled through <strong>Cloudinary</strong>, creating a rich and interactive experience.</p><p>This project highlights backend development, RESTful API design, and deployment readiness.</p>",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/YelpCamp",
+    "liveLink": "https://yelpcamp-2qfp.onrender.com/campgrounds",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "images-projects/YelpCamp.png"
+  },
+  {
+    "id": "2",
+    "title": "Quizzy",
+    "description": "<p><strong>Quizzy</strong> is a single-page application (SPA) built with <strong>React</strong> and <strong>Vite</strong> that tests users on various subjects. It features a dynamic scoring system, a countdown timer for each question, and a progress bar for quiz tracking.</p><p>The app uses functional components and <strong>React hooks</strong> for state management, with a clean and responsive UI styled in plain CSS.</p>",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/quizzy",
+    "liveLink": "https://quizzy-dun.vercel.app/",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "images-projects/quizzy.png"
+  },
+  {
+    "id": "3",
+    "title": "Traveler",
+    "description": "<p><strong>Traveler</strong> is a React-based travel log application built with <strong>TypeScript</strong> and <strong>Vite</strong>. It allows users to record cities and countries they've visited and view them in a clear, list-style layout.</p><p>Future updates will integrate an interactive map and global state management using the <strong>React Context API</strong>. This project reflects a focus on modular architecture and scalability.</p>",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/traveler",
+    "liveLink": "",
+    "technologies": ["HTML", "CSS", "JavaScript", "React", "React Router"],
+    "image": ""
+  }
+]
