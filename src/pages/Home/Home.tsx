@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import { FaRegFileAlt } from "react-icons/fa";
+import { FaRegFileAlt, FaGoodreads } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -21,6 +21,25 @@ export default function Home() {
         Welcome — feel free to explore my projects, read more about me, or get
         in touch!
       </p>
+
+      <div className={styles.readingSection}>
+        <h3>Beyond Coding</h3>
+        <p>
+          When I'm not coding, you'll often find me exploring new worlds through
+          books. I'm particularly drawn to Fantasy, Science Fiction, and
+          thought-provoking non-fiction.
+        </p>
+        <a
+          href="https://www.goodreads.com/user/show/104343357-eli-harel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.goodreadsLink}
+          title="Check out my reading list on Goodreads"
+        >
+          <FaGoodreads className={styles.goodreadsIcon} />
+          <span>See what I'm reading</span>
+        </a>
+      </div>
 
       <div className={styles.buttonContainer}>
         <a
