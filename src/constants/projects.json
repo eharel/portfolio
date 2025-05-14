@@ -5,9 +5,9 @@
     "description": "Rate camps across the States.",
     "status": "Completed",
     "gitHubLink": "https://github.com/eharel/YelpCamp",
-    "liveLink": "",
+    "liveLink": "https://yelpcamp-2qfp.onrender.com/campgrounds",
     "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": ""
+    "image": "images-projects/YelpCamp.png"
   },
   {
     "id": "2",
