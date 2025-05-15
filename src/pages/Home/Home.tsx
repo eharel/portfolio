@@ -21,8 +21,9 @@ export default function Home() {
         Welcome — feel free to explore my projects, read more about me, or get
         in touch!
       </p>
-
-      <div className={styles.readingSection}>
+      <br />
+      <div>
+        {/* <div className={styles.readingSection}> */}
         <h3>Beyond Coding</h3>
         <p>
           When I'm not coding, you'll often find me exploring new worlds through
