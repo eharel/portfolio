@@ -8,42 +8,94 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-// Validate that all required environment variables are set
-if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
-  console.error(
-    "Missing required EmailJS environment variables. Make sure you have set up your .env file correctly."
-  );
-}
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    phone: "", // Honeypot field
   });
   const [status, setStatus] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Initialize EmailJS when component mounts
   useEffect(() => {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialized successfully");
+    } catch (error) {
+      console.error("EmailJS initialization failed:", error);
+      setErrorMessage("Failed to initialize email service");
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // If honeypot field is filled, silently reject the submission
+    if (formData.phone) {
+      setStatus("success"); // Fake success to avoid alerting bots
+      setFormData({ name: "", email: "", message: "", phone: "" });
+      return;
+    }
+
     setStatus("sending");
+    setErrorMessage("");
+
+    // Validate environment variables
+    if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
+      console.error("Missing required EmailJS configuration");
+      setStatus("error");
+      setErrorMessage("Email service configuration error");
+      return;
+    }
 
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_email: "eliharel3@gmail.com", // Your email address
+      console.log("Attempting to send email with:", {
+        serviceId: EMAILJS_SERVICE_ID,
+        templateId: EMAILJS_TEMPLATE_ID,
+        data: {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message.substring(0, 20) + "...", // Log first 20 chars for privacy
+        },
       });
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "eliharel3@gmail.com",
+        }
+      );
+
+      console.log("EmailJS response:", response);
+
+      if (response.status === 200) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "", phone: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
     } catch (error: unknown) {
       console.error("Email sending failed:", error);
+      let errorMsg = "Failed to send message. Please try again.";
+
+      if (error instanceof Error) {
+        console.error("Error details:", error.message);
+        // Provide more specific error messages based on common issues
+        if (error.message.includes("Invalid public key")) {
+          errorMsg = "Email service configuration error";
+        } else if (error.message.includes("Network")) {
+          errorMsg = "Network error. Please check your connection.";
+        }
+      }
+
       setStatus("error");
+      setErrorMessage(errorMsg);
     }
   };
 
@@ -92,6 +144,19 @@ export default function Contact() {
           />
         </div>
 
+        {/* Honeypot field - hidden from real users */}
+        <div className={styles["honeypot"]}>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div className={styles["form-group"]}>
           <label htmlFor="message">Message:</label>
           <textarea
@@ -120,7 +185,7 @@ export default function Contact() {
         )}
         {status === "error" && (
           <p className={styles["error-message"]}>
-            Failed to send message. Please try again.
+            {errorMessage || "Failed to send message. Please try again."}
           </p>
         )}
       </form>

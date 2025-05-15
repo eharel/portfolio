@@ -22,8 +22,8 @@ export default function Home() {
         in touch!
       </p>
       <br />
-      {/* <div> */}
-      <div className={styles.readingSection}>
+      <div>
+        {/* <div className={styles.readingSection}> */}
         <h3>Beyond Coding</h3>
         <p>
           When I'm not coding, you'll often find me exploring new worlds through
