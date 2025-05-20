@@ -1,0 +1,48 @@
+[
+  {
+    "id": "wild-oasis",
+    "title": "The Wild Oasis",
+    "description": "A full-featured hotel management dashboard with booking, customer, and cabin management, built as part of the Ultimate React course.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Styled Components",
+      "React Query",
+      "React Router",
+      "Recharts"
+    ],
+    "status": "planned",
+    "plannedFeatures": [
+      "Dashboard overview with booking stats",
+      "Cabin and guest management",
+      "Create, edit, and delete bookings",
+      "Responsive and accessible UI",
+      "Authentication and role-based access",
+      "Data visualizations for revenue and occupancy"
+    ],
+    "estimatedCompletion": "Summer 2025"
+  },
+  {
+    "id": "workout-tracker",
+    "title": "Workout Tracker",
+    "description": "A progressive workout tracking app that integrates with Google Calendar to help users follow structured push-pull-legs routines, visualize performance trends, and stay accountable.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Google Calendar API"
+    ],
+    "status": "planned",
+    "plannedFeatures": [
+      "Create and schedule custom workouts",
+      "Connect with Google Calendar for seamless syncing",
+      "View past workouts and progression history",
+      "Track key performance metrics over time",
+      "Support for multi-week training blocks",
+      "Dark mode and responsive design"
+    ],
+    "estimatedCompletion": "Fall 2025"
+  }
+]

@@ -1,0 +1,170 @@
+.plannedProjectCard {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.plannedProjectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.statusBadge {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.features,
+.technologies,
+.completion {
+  margin-top: 1.5rem;
+}
+
+.featuresHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.featuresHeader:hover {
+  opacity: 0.8;
+}
+
+.featuresHeader h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin: 0;
+  flex: 1;
+}
+
+.toggleIcon {
+  font-size: 1.2rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.featuresList {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.expanded {
+  max-height: 500px;
+}
+
+.collapsed {
+  max-height: 0;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.features ul li {
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.features ul li:last-child {
+  border-bottom: none;
+}
+
+.featureTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.featureTag {
+  background-color: rgba(255, 255, 255, 0.15); /* Lighter white background */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: var(--text-primary); /* Changed to primary text color */
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Added subtle border */
+}
+
+.featureTag:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.techTag {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .plannedProjectCard {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+}

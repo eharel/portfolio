@@ -22,11 +22,19 @@
   {
     "id": "3",
     "title": "Traveler",
-    "description": "<p><strong>Traveler</strong> is a React-based travel log application built with <strong>TypeScript</strong> and <strong>Vite</strong>. It allows users to record cities and countries they've visited and view them in a clear, list-style layout.</p><p>Future updates will integrate an interactive map and global state management using the <strong>React Context API</strong>. This project reflects a focus on modular architecture and scalability.</p>",
+    "description": "<p><strong>Traveler</strong> is a modern front-end travel log application built with React, TypeScript, and Vite. It enables users to track and visualize their journeys with a clean, intuitive interface.</p><ul><li><strong>Location Management:</strong> Add and organize cities and countries you've visited</li><li><strong>Interactive Map:</strong> Visualize your travels (map integration planned)</li><li><strong>Responsive Design:</strong> Optimized for both desktop and mobile use</li><li><strong>Modern Tech Stack:</strong> Built with React, Vite, and TypeScript</li></ul><p>This front-end-only project demonstrates strong state management, clean architecture, and a focus on user experience. Future updates will include map integration using Leaflet or Mapbox, and shared state with the Context API.</p>",
     "status": "Completed",
     "gitHubLink": "https://github.com/eharel/traveler",
-    "liveLink": "",
-    "technologies": ["HTML", "CSS", "JavaScript", "React", "React Router"],
-    "image": ""
+    "liveLink": "https://traveler-chi-two.vercel.app/",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "React Router",
+      "TypeScript",
+      "Context API"
+    ],
+    "image": "images-projects/Traveler.png"
   }
 ]
