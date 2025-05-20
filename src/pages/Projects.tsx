@@ -5,7 +5,6 @@ import PlannedProjectCard from "../components/PlannedProjectCard";
 import projects from "../data/projects.json";
 import plannedProjects from "../data/planned-projects.json";
 import type { Project } from "../types";
-import type { PlannedProject } from "../types/planned-project";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -30,7 +29,7 @@ export default function Projects() {
           />
         ))}
       </div>
-      
+
       <div className="planned-projects-section">
         <h2>Planned Projects</h2>
         <div className="planned-projects-container">
@@ -39,7 +38,7 @@ export default function Projects() {
           ))}
         </div>
       </div>
-      
+
       <ProjectModal project={selectedProject} onClose={handleCloseModal} />
     </div>
   );

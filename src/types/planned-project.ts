@@ -3,7 +3,7 @@ export interface PlannedProject {
   title: string;
   description: string;
   technologies: string[];
-  status: "planned" | "in-progress";
+  status: string;
   plannedFeatures: string[];
-  estimatedCompletion?: string;
+  estimatedCompletion: string;
 }
