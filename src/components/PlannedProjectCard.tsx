@@ -1,12 +1,17 @@
 import type { PlannedProject } from "../types/planned-project";
 import "../style.css";
 import styles from "./PlannedProjectCard.module.css";
+import { useState } from 'react';
 
 interface PlannedProjectCardProps {
   project: PlannedProject;
 }
 
-export default function PlannedProjectCard({ project }: PlannedProjectCardProps) {
+export default function PlannedProjectCard({
+  project,
+}: PlannedProjectCardProps) {
+  const [isFeaturesExpanded, setIsFeaturesExpanded] = useState(false);
+
   return (
     <div className={styles.plannedProjectCard}>
       <div className={styles.header}>
@@ -15,14 +20,28 @@ export default function PlannedProjectCard({ project }: PlannedProjectCardProps)
       </div>
       <div className={styles.content}>
         <p className={styles.description}>{project.description}</p>
-        
+
         <div className={styles.features}>
-          <h4>Planned Features:</h4>
-          <ul>
-            {project.plannedFeatures.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
+          <div 
+            className={styles.featuresHeader}
+            onClick={() => setIsFeaturesExpanded(!isFeaturesExpanded)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Enter' && setIsFeaturesExpanded(!isFeaturesExpanded)}
+            aria-expanded={isFeaturesExpanded}
+          >
+            <h4>Planned Features</h4>
+            <span className={styles.toggleIcon}>{isFeaturesExpanded ? "▼" : "▶"}</span>
+          </div>
+          <div className={`${styles.featuresList} ${isFeaturesExpanded ? styles.expanded : styles.collapsed}`}>
+            <div className={styles.featureTags}>
+              {project.plannedFeatures.map((feature, index) => (
+                <span key={index} className={styles.featureTag}>
+                  {feature}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {project.technologies.length > 0 && (
@@ -30,7 +49,9 @@ export default function PlannedProjectCard({ project }: PlannedProjectCardProps)
             <h4>Technologies:</h4>
             <div className={styles.techTags}>
               {project.technologies.map((tech, index) => (
-                <span key={index} className={styles.techTag}>{tech}</span>
+                <span key={index} className={styles.techTag}>
+                  {tech}
+                </span>
               ))}
             </div>
           </div>

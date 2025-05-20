@@ -54,16 +54,53 @@
   margin-top: 1.5rem;
 }
 
-h4 {
+.featuresHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.featuresHeader:hover {
+  opacity: 0.8;
+}
+
+.featuresHeader h4 {
   color: var(--text-primary);
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  flex: 1;
+}
+
+.toggleIcon {
+  font-size: 1.2rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.featuresList {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.expanded {
+  max-height: 500px;
+}
+
+.collapsed {
+  max-height: 0;
 }
 
 .features ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0 0;
 }
 
 .features ul li {
@@ -74,6 +111,33 @@ h4 {
 
 .features ul li:last-child {
   border-bottom: none;
+}
+
+.featureTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.featureTag {
+  background-color: rgba(255, 255, 255, 0.15); /* Lighter white background */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: var(--text-primary); /* Changed to primary text color */
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Added subtle border */
+}
+
+.featureTag:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .techTags {
@@ -96,7 +160,7 @@ h4 {
     max-width: 100%;
     margin: 1rem 0;
   }
-  
+
   .header {
     flex-direction: column;
     align-items: flex-start;

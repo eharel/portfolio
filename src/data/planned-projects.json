@@ -1,29 +1,48 @@
 [
   {
-    "id": "1",
-    "title": "Portfolio v2",
-    "description": "A complete redesign of my portfolio website with a modern, minimalist aesthetic and enhanced interactivity.",
-    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "id": "wild-oasis",
+    "title": "The Wild Oasis",
+    "description": "A full-featured hotel management dashboard with booking, customer, and cabin management, built as part of the Ultimate React course.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Styled Components",
+      "React Query",
+      "React Router",
+      "Recharts"
+    ],
     "status": "planned",
     "plannedFeatures": [
-      "Dark mode",
-      "Dynamic animations",
-      "Improved project filtering",
-      "Portfolio analytics"
+      "Dashboard overview with booking stats",
+      "Cabin and guest management",
+      "Create, edit, and delete bookings",
+      "Responsive and accessible UI",
+      "Authentication and role-based access",
+      "Data visualizations for revenue and occupancy"
     ],
     "estimatedCompletion": "Summer 2025"
   },
   {
-    "id": "2",
-    "title": "Weather Dashboard",
-    "description": "A weather application that provides real-time weather information and forecasts using multiple API providers.",
-    "technologies": ["React", "TypeScript", "Redux", "OpenWeather API"],
-    "status": "in-progress",
+    "id": "workout-tracker",
+    "title": "Workout Tracker",
+    "description": "A progressive workout tracking app that integrates with Google Calendar to help users follow structured push-pull-legs routines, visualize performance trends, and stay accountable.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Google Calendar API"
+    ],
+    "status": "planned",
     "plannedFeatures": [
-      "Multiple location tracking",
-      "Weather alerts",
-      "Historical weather data",
-      "Custom location pins"
-    ]
+      "Create and schedule custom workouts",
+      "Connect with Google Calendar for seamless syncing",
+      "View past workouts and progression history",
+      "Track key performance metrics over time",
+      "Support for multi-week training blocks",
+      "Dark mode and responsive design"
+    ],
+    "estimatedCompletion": "Fall 2025"
   }
 ]
