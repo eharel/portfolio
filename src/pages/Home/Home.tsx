@@ -44,7 +44,7 @@ export default function Home() {
 
       <div className={styles.buttonContainer}>
         <a
-          href="/Resume - Eli Harel.pdf"
+          href="/Eli_Harel_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeButton}
