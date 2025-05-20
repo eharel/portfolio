@@ -213,6 +213,26 @@ a:hover {
   padding: 2rem; /* Add padding around the container */
 }
 
+.planned-projects-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.planned-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.planned-projects-section h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
 /* === Project Card === */
 .project-card {
   width: 300px; /* Make the card bigger */
