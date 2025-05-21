@@ -1,7 +1,7 @@
 [
   {
-    "id": "wild-oasis",
-    "title": "The Wild Oasis",
+    "id": "innsight",
+    "title": "Innsight",
     "description": "A full-featured hotel management dashboard with booking, customer, and cabin management, built as part of the Ultimate React course.",
     "technologies": [
       "React",
