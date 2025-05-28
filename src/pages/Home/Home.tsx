@@ -4,7 +4,8 @@ import { FaRegFileAlt, FaGoodreads } from "react-icons/fa";
 export default function Home() {
   return (
     <section className="section" id="home">
-      <h1 className="section-title">Hi, I'm Eli Harel</h1>
+      {/* <h1 className="section-title> */}
+      <h1 className="text-5xl text-gray-300">Hi, I'm Eli Harel</h1>
 
       <p>
         I'm a React developer with a strong computer science background and a
