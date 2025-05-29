@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
 import { FaRegFileAlt, FaGoodreads } from "react-icons/fa";
+import { SOCIAL_LINKS } from "../../types/constants";
 
 export default function Home() {
   return (
@@ -31,11 +32,11 @@ export default function Home() {
           thought-provoking non-fiction.
         </p>
         <a
-          href="https://www.goodreads.com/user/show/104343357-eli-harel"
+          href={SOCIAL_LINKS.GOODREADS.url}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.goodreadsLink}
-          title="Check out my reading list on Goodreads"
+          title={SOCIAL_LINKS.GOODREADS.label}
         >
           <FaGoodreads className={styles.goodreadsIcon} />
           <span>See what I'm reading</span>

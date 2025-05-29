@@ -40,7 +40,8 @@ export default function About() {
 
           <p>
             When I'm not coding, I'm likely gaming with my wife, at the gym, or
-            with a kindle on the couch used as a bed by a cuddly chihuahua.
+            with a kindle on the couch, being used as a bed by a cuddly
+            chihuahua.
           </p>
         </div>
       </div>

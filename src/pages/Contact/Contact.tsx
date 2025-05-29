@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
 import { FaGithub, FaLinkedin, FaGoodreads } from "react-icons/fa";
+import { SOCIAL_LINKS } from "../../types/constants";
 
 // Initialize EmailJS with environment variables
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -195,29 +196,29 @@ export default function Contact() {
           You can also find me on:
           <div className={styles["social-icons"]}>
             <a
-              href="https://github.com/eharel"
+              href={SOCIAL_LINKS.GITHUB.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              title="Visit my GitHub Profile"
+              aria-label={SOCIAL_LINKS.GITHUB.label}
+              title={SOCIAL_LINKS.GITHUB.label}
             >
               <FaGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href={SOCIAL_LINKS.LINKEDIN.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              title="Connect with me on LinkedIn"
+              aria-label={SOCIAL_LINKS.LINKEDIN.label}
+              title={SOCIAL_LINKS.LINKEDIN.label}
             >
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://www.goodreads.com/user/show/104343357-eli-harel"
+              href={SOCIAL_LINKS.GOODREADS.url}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Goodreads Profile"
-              title="Check out my reading list on Goodreads"
+              aria-label={SOCIAL_LINKS.GOODREADS.label}
+              title={SOCIAL_LINKS.GOODREADS.label}
             >
               <FaGoodreads size={24} />
             </a>

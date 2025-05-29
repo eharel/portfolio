@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SOCIAL_LINKS } from "../types/constants";
 
 export default function Footer() {
   return (
@@ -7,20 +8,20 @@ export default function Footer() {
         <p className="footer-text">© 2025 Eli Harel</p>
         <div className="footer-links">
           <a
-            href="https://github.com/eharel"
+            href={SOCIAL_LINKS.GITHUB.url}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
-            title="GitHub" /* Tooltip text for GitHub */
+            title={SOCIAL_LINKS.GITHUB.label}
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://github.com/eharel"
+            href={SOCIAL_LINKS.LINKEDIN.url}
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
-            title="LinkedIn" /* Tooltip text for LinkedIn */
+            title={SOCIAL_LINKS.LINKEDIN.label}
           >
             <FaLinkedin size={24} />
           </a>
