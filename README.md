@@ -30,9 +30,9 @@ While I don’t yet have formal industry experience, I’ve built several substa
 
 I'm currently open to new opportunities and would love to connect!
 
-- 📧 **Email:** [elihare3@gmail.com](mailto:elihare3@gmail.com)
-- 💼 **LinkedIn:** [Eli Harel](https://linkedin.com/in/eliharel)
-- 🐙 **GitHub:** [eharel](https://github.com/eharel)
+- 📧 [**Email:**](mailto:eliharel3@gmail.com)
+- 💼 [**LinkedIn:**](https://linkedin.com/in/eliharel)
+- 🐙 [**GitHub:**](https://github.com/eharel)
 
 ---
 
