@@ -1,23 +1,22 @@
 [
   {
-    "id": "1",
-    "title": "YelpCamp",
-    "description": "<p><strong>YelpCamp</strong> is a full-stack web application that allows users to explore, create, and review campgrounds across the United States. Built with <strong>Express.js</strong> and <strong>MongoDB</strong>, it implements full CRUD functionality, user authentication via <strong>Passport.js</strong>, and dynamic page rendering using <strong>EJS</strong>. Image uploads are handled through <strong>Cloudinary</strong>, creating a rich and interactive experience.</p><p>This project highlights backend development, RESTful API design, and deployment readiness.</p>",
+    "id": "4",
+    "title": "Pizza Palooza",
+    "description": "<p><strong>Pizza Palooza</strong> is a modern React application for online pizza ordering, focused on a seamless user experience and responsive design. Built with <strong>React 18</strong>, <strong>TypeScript</strong>, <strong>React Router 6</strong>, and <strong>Tailwind CSS</strong>, it demonstrates advanced front-end patterns and state management using <strong>Redux Toolkit</strong>.</p><p>Key features include:</p><ul><li><strong>Dynamic Menu:</strong> Fetches pizza data from an API with real-time availability</li><li><strong>Cart Management:</strong> Add, remove, and adjust quantities with persistent state</li><li><strong>Priority Orders:</strong> Upgrade orders with price confirmation dialogs and delivery time estimation</li><li><strong>Responsive Design:</strong> Fully optimized for both mobile and desktop</li></ul><p>This project showcases modern React patterns including component composition, data fetching via React Router loaders/actions, and TypeScript for end-to-end type safety.</p>",
     "status": "Completed",
-    "gitHubLink": "https://github.com/eharel/YelpCamp",
-    "liveLink": "https://yelpcamp-2qfp.onrender.com/campgrounds",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "images-projects/YelpCamp.png"
-  },
-  {
-    "id": "2",
-    "title": "Quizzy",
-    "description": "<p><strong>Quizzy</strong> is a single-page application (SPA) built with <strong>React</strong> and <strong>Vite</strong> that tests users on various subjects. It features a dynamic scoring system, a countdown timer for each question, and a progress bar for quiz tracking.</p><p>The app uses functional components and <strong>React hooks</strong> for state management, with a clean and responsive UI styled in plain CSS.</p>",
-    "status": "Completed",
-    "gitHubLink": "https://github.com/eharel/quizzy",
-    "liveLink": "https://quizzy-dun.vercel.app/",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "images-projects/quizzy.png"
+    "gitHubLink": "https://github.com/eharel/pizza-palooza",
+    "liveLink": "https://pizzapalooza.vercel.app/",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "React Router",
+      "TypeScript",
+      "Redux Toolkit",
+      "Tailwind CSS"
+    ],
+    "image": "images-projects/PizzaPalooza.png"
   },
   {
     "id": "3",
@@ -36,5 +35,25 @@
       "Context API"
     ],
     "image": "images-projects/Traveler.png"
+  },
+  {
+    "id": "1",
+    "title": "YelpCamp",
+    "description": "<p><strong>YelpCamp</strong> is a full-stack web application that allows users to explore, create, and review campgrounds across the United States. Built with <strong>Express.js</strong> and <strong>MongoDB</strong>, it implements full CRUD functionality, user authentication via <strong>Passport.js</strong>, and dynamic page rendering using <strong>EJS</strong>. Image uploads are handled through <strong>Cloudinary</strong>, creating a rich and interactive experience.</p><p>This project highlights backend development, RESTful API design, and deployment readiness.</p>",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/YelpCamp",
+    "liveLink": "https://yelpcamp-2qfp.onrender.com/campgrounds",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "images-projects/YelpCamp.png"
+  },
+  {
+    "id": "2",
+    "title": "Quizzy",
+    "description": "<p><strong>Quizzy</strong> is a single-page application (SPA) built with <strong>React</strong> and <strong>Vite</strong> that tests users on various subjects. It features a dynamic scoring system, a countdown timer for each question, and a progress bar for quiz tracking.</p><p>The app uses functional components and <strong>React hooks</strong> for state management, with a clean and responsive UI styled in plain CSS.</p>",
+    "status": "Completed",
+    "gitHubLink": "https://github.com/eharel/quizzy",
+    "liveLink": "https://quizzy-dun.vercel.app/",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "images-projects/quizzy.png"
   }
 ]
