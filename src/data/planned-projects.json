@@ -2,7 +2,7 @@
   {
     "id": "innsight",
     "title": "Innsight",
-    "description": "A full-featured hotel management dashboard with booking, customer, and cabin management, built as part of the Ultimate React course.",
+    "description": "A full-featured hotel management dashboard with booking, customer, and cabin management.",
     "technologies": [
       "React",
       "TypeScript",
