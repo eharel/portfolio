@@ -6,4 +6,5 @@ export interface PlannedProject {
   status: string;
   plannedFeatures: string[];
   estimatedCompletion: string;
+  gitHubLink?: string;
 }

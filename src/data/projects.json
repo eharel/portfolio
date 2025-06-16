@@ -41,7 +41,7 @@
     "title": "YelpCamp",
     "description": "<p><strong>YelpCamp</strong> is a full-stack web application that allows users to explore, create, and review campgrounds across the United States. Built with <strong>Express.js</strong> and <strong>MongoDB</strong>, it implements full CRUD functionality, user authentication via <strong>Passport.js</strong>, and dynamic page rendering using <strong>EJS</strong>. Image uploads are handled through <strong>Cloudinary</strong>, creating a rich and interactive experience.</p><p>This project highlights backend development, RESTful API design, and deployment readiness.</p>",
     "status": "Completed",
-    "gitHubLink": "https://github.com/eharel/YelpCamp",
+    "gitHubLink": "https://github.com/eharel/yelp-camp",
     "liveLink": "https://yelpcamp-2qfp.onrender.com/campgrounds",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "image": "images-projects/YelpCamp.png"

@@ -7,12 +7,13 @@
       "React",
       "TypeScript",
       "Supabase",
-      "Styled Components",
+      "Tailwind CSS",
       "React Query",
       "React Router",
-      "Recharts"
+      "Recharts",
+      "Next.js"
     ],
-    "status": "planned",
+    "status": "in progress",
     "plannedFeatures": [
       "Dashboard overview with booking stats",
       "Cabin and guest management",
@@ -21,7 +22,8 @@
       "Authentication and role-based access",
       "Data visualizations for revenue and occupancy"
     ],
-    "estimatedCompletion": "Summer 2025"
+    "estimatedCompletion": "Summer 2025",
+    "gitHubLink": "https://github.com/eharel/innsight"
   },
   {
     "id": "workout-tracker",
@@ -43,6 +45,7 @@
       "Support for multi-week training blocks",
       "Dark mode and responsive design"
     ],
-    "estimatedCompletion": "Fall 2025"
+    "estimatedCompletion": "Fall 2025",
+    "gitHubLink": ""
   }
 ]
