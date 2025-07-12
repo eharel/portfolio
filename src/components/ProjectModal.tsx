@@ -32,15 +32,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           >
             <FaGithub />
           </a>
-          <a
-            href={project.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-modal-live"
-            title="Open Live Project"
-          >
-            <FaExternalLinkAlt />
-          </a>
+          {project.liveLink && (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-modal-live"
+              title="Open Live Project"
+            >
+              <FaExternalLinkAlt />
+            </a>
+          )}
         </div>
       </div>
     </div>

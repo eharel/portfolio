@@ -19,6 +19,22 @@
     "image": "images-projects/PizzaPalooza.png"
   },
   {
+    "id": "5",
+    "title": "Ace Remodeling Toolkit",
+    "description": "<p><strong>Ace Remodeling Toolkit</strong> is a real-world internal CRM built for a residential remodeling company, designed to streamline project management using <strong>Google Sheets</strong> and <strong>Apps Script</strong>. This freelance consulting project demonstrates full ownership of a live operational system used by multiple team members.</p><ul><li><strong>CRM Automation:</strong> Automates dashboard generation, project setup, and cost tracking in Google Sheets</li><li><strong>Script Library:</strong> Refactored legacy code into modular, reusable functions with centralized config</li><li><strong>Deployment Pipeline:</strong> Used <code>clasp</code> and GitHub for version control and multi-account script updates</li><li><strong>Real Business Impact:</strong> Reduced manual overhead and improved data reliability across active construction projects</li></ul>",
+    "status": "Ongoing",
+    "gitHubLink": "https://github.com/eharel/ace-remodeling-automation",
+    "liveLink": "",
+    "technologies": [
+      "Apps Script",
+      "Google Sheets",
+      "JavaScript",
+      "clasp",
+      "GitHub"
+    ],
+    "image": "images-projects/AceRemodeling.png"
+  },
+  {
     "id": "3",
     "title": "Traveler",
     "description": "<p><strong>Traveler</strong> is a modern front-end travel log application built with React, TypeScript, and Vite. It enables users to track and visualize their journeys with a clean, intuitive interface.</p><ul><li><strong>Location Management:</strong> Add and organize cities and countries you've visited</li><li><strong>Interactive Map:</strong> Visualize your travels (map integration planned)</li><li><strong>Responsive Design:</strong> Optimized for both desktop and mobile use</li><li><strong>Modern Tech Stack:</strong> Built with React, Vite, and TypeScript</li></ul><p>This front-end-only project demonstrates strong state management, clean architecture, and a focus on user experience. Future updates will include map integration using Leaflet or Mapbox, and shared state with the Context API.</p>",
