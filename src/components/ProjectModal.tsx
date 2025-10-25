@@ -1,4 +1,4 @@
-import type { Project } from "../types";
+import type { Project, ProjectStatus } from "../types";
 import "../style.css";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -6,6 +6,14 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 interface ProjectModalProps {
   project: Project | null; // The selected project or null
   onClose: () => void; // Callback to close the modal
+}
+
+/**
+ * Converts a ProjectStatus to a CSS class-friendly string
+ * Example: "In Development" -> "in-development"
+ */
+function getStatusClass(status: ProjectStatus): string {
+  return status.toLowerCase().replace(/\s+/g, "-");
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
@@ -18,6 +26,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           &times;
         </button>
         <h2>{project.title}</h2>
+
+        {/* Badges section for category and status */}
+        <div className="project-modal-badges">
+          <span className="badge badge-category">{project.category}</span>
+          <span
+            className={`badge badge-status badge-status-${getStatusClass(
+              project.status
+            )}`}
+          >
+            {project.status}
+          </span>
+        </div>
+
         <div
           className="project-modal-description"
           dangerouslySetInnerHTML={{ __html: project.description }}

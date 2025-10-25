@@ -271,26 +271,39 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.5); /* Darken the background on hover */
 }
 
-.project-card p {
+.project-card-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%; /* Add width to control text wrapping */
-  margin: 0; /* Remove any default margins */
-  padding: 0; /* Remove any default padding */
-  font-size: 1rem;
-  font-weight: bold;
-  opacity: 0;
-  transition: all 0.3s ease; /* Simplified transition */
+  width: 90%;
+  margin: 0;
+  padding: 0;
   text-align: center;
   z-index: 2;
-  line-height: 1.2; /* Control line height for multi-line text */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.project-card:hover p {
+.project-card:hover .project-card-content {
   opacity: 1;
+}
+
+.project-card-title {
   font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.project-card-description {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 .project-image {
@@ -422,6 +435,59 @@ a:hover {
   color: var(--text-primary);
   margin: 0 0 1rem 0;
   font-size: 1.75rem;
+}
+
+/* === Project Modal Badges === */
+.project-modal-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badge-category {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Status badge color variations */
+.badge-status {
+  font-size: 0.8125rem;
+}
+
+.badge-status-completed {
+  background-color: #10b981;
+  color: white;
+}
+
+.badge-status-in-development {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.badge-status-in-production {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.badge-status-ongoing {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.badge-status-archived {
+  background-color: #6b7280;
+  color: white;
 }
 
 .project-modal a {

@@ -13,7 +13,10 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       onClick={() => onClick(project)} // Trigger the callback with the project
     >
       <img src={project.image} alt={project.title} className="project-image" />
-      <p>{project.title}</p>
+      <div className="project-card-content">
+        <p className="project-card-title">{project.title}</p>
+        <p className="project-card-description">{project.shortDescription}</p>
+      </div>
     </div>
   );
 }

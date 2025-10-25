@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
 import PlannedProjectCard from "../components/PlannedProjectCard";
-import projects from "../data/projects.json";
+import projects from "../data/projects";
 import plannedProjects from "../data/planned-projects.json";
 import type { Project } from "../types";
 

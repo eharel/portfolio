@@ -1,0 +1,123 @@
+import type { Project } from "../types";
+
+const projects: Project[] = [
+  {
+    id: "1",
+    title: "ACE Remodeling App",
+    description:
+      "<p><strong>ACE Remodeling App</strong> is a production-ready React Native application built for ACE Remodeling's project managers. The app serves as a professional digital portfolio tool for iPad, consolidating project photos, client details, and specifications into a polished presentation interface used during client meetings and site visits.</p><p>Key features include:</p><ul><li><strong>Cross-Platform Architecture:</strong> Built with React Native, Expo, and TypeScript for maintainable, type-safe mobile development</li><li><strong>Firebase Backend:</strong> Serverless architecture with Firestore for project data and Firebase Storage for media assets</li><li><strong>Advanced Theming System:</strong> Token-based design system supporting three theme variants with runtime switching and persistent user preferences</li><li><strong>Offline-First Design:</strong> Local data persistence with cloud sync for reliable operation in the field</li><li><strong>iPad-Optimized UI:</strong> Custom gesture controls, large touch targets, and landscape-optimized layouts for professional presentations</li></ul><p>This project demonstrates production mobile app development, architectural decision-making for constrained environments (solo developer, no IT support), and real-world client collaboration. The codebase follows enterprise-level patterns including modular component architecture, centralized state management with Context API, comprehensive TypeScript typing throughout, and a comprehensive design system with reusable themed components.</p>",
+    shortDescription:
+      "Custom iPad portfolio application for construction project managers to showcase completed renovations during client consultations.",
+    status: "In Development",
+    category: "Mobile App",
+    gitHubLink: "https://github.com/eharel/ace-remodeling-app",
+    liveLink: "",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase",
+      "Firestore",
+      "Firebase Storage",
+      "Expo Router",
+      "Context API",
+      "React Navigation",
+    ],
+    image: "images-projects/ACEApp.png",
+  },
+  {
+    id: "2",
+    title: "Pizza Palooza",
+    description:
+      "<p><strong>Pizza Palooza</strong> is a modern React application for online pizza ordering, focused on a seamless user experience and responsive design. Built with <strong>React 18</strong>, <strong>TypeScript</strong>, <strong>React Router 6</strong>, and <strong>Tailwind CSS</strong>, it demonstrates advanced front-end patterns and state management using <strong>Redux Toolkit</strong>.</p><p>Key features include:</p><ul><li><strong>Dynamic Menu:</strong> Fetches pizza data from an API with real-time availability</li><li><strong>Cart Management:</strong> Add, remove, and adjust quantities with persistent state</li><li><strong>Priority Orders:</strong> Upgrade orders with price confirmation dialogs and delivery time estimation</li><li><strong>Responsive Design:</strong> Fully optimized for both mobile and desktop</li></ul><p>This project showcases modern React patterns including component composition, data fetching via React Router loaders/actions, and TypeScript for end-to-end type safety.</p>",
+    shortDescription:
+      "Modern React pizza ordering application with dynamic menu, cart management, and Redux Toolkit state management.",
+    status: "Completed",
+    category: "Web App",
+    gitHubLink: "https://github.com/eharel/pizza-palooza",
+    liveLink: "https://pizzapalooza.vercel.app/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "React Router",
+      "TypeScript",
+      "Redux Toolkit",
+      "Tailwind CSS",
+    ],
+    image: "images-projects/PizzaPalooza.png",
+  },
+  {
+    id: "3",
+    title: "Ace Remodeling Toolkit",
+    description:
+      "<p><strong>Ace Remodeling Toolkit</strong> is a real-world internal CRM built for a residential remodeling company, designed to streamline project management using <strong>Google Sheets</strong> and <strong>Apps Script</strong>. This freelance consulting project demonstrates full ownership of a live operational system used by multiple team members.</p><ul><li><strong>CRM Automation:</strong> Automates dashboard generation, project setup, and cost tracking in Google Sheets</li><li><strong>Script Library:</strong> Refactored legacy code into modular, reusable functions with centralized config</li><li><strong>Deployment Pipeline:</strong> Used <code>clasp</code> and GitHub for version control and multi-account script updates</li><li><strong>Real Business Impact:</strong> Reduced manual overhead and improved data reliability across active construction projects</li></ul>",
+    shortDescription:
+      "Internal CRM built with Google Sheets and Apps Script to automate project management for a residential remodeling company.",
+    status: "Ongoing",
+    category: "Backend Tool",
+    gitHubLink: "https://github.com/eharel/ace-remodeling-automation",
+    liveLink: "",
+    technologies: [
+      "Apps Script",
+      "Google Sheets",
+      "JavaScript",
+      "clasp",
+      "GitHub",
+    ],
+    image: "images-projects/ACEDashboard.png",
+  },
+  {
+    id: "4",
+    title: "Traveler",
+    description:
+      "<p><strong>Traveler</strong> is a modern front-end travel log application built with React, TypeScript, and Vite. It enables users to track and visualize their journeys with a clean, intuitive interface.</p><ul><li><strong>Location Management:</strong> Add and organize cities and countries you've visited</li><li><strong>Interactive Map:</strong> Visualize your travels (map integration planned)</li><li><strong>Responsive Design:</strong> Optimized for both desktop and mobile use</li><li><strong>Modern Tech Stack:</strong> Built with React, Vite, and TypeScript</li></ul><p>This front-end-only project demonstrates strong state management, clean architecture, and a focus on user experience. Future updates will include map integration using Leaflet or Mapbox, and shared state with the Context API.</p>",
+    shortDescription:
+      "Travel log application for tracking and visualizing visited cities and countries with an intuitive React interface.",
+    status: "Completed",
+    category: "Web App",
+    gitHubLink: "https://github.com/eharel/traveler",
+    liveLink: "https://traveler-chi-two.vercel.app/",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "React Router",
+      "TypeScript",
+      "Context API",
+    ],
+    image: "images-projects/Traveler.png",
+  },
+  {
+    id: "5",
+    title: "YelpCamp",
+    description:
+      "<p><strong>YelpCamp</strong> is a full-stack web application that allows users to explore, create, and review campgrounds across the United States. Built with <strong>Express.js</strong> and <strong>MongoDB</strong>, it implements full CRUD functionality, user authentication via <strong>Passport.js</strong>, and dynamic page rendering using <strong>EJS</strong>. Image uploads are handled through <strong>Cloudinary</strong>, creating a rich and interactive experience.</p><p>This project highlights backend development, RESTful API design, and deployment readiness.</p>",
+    shortDescription:
+      "Full-stack campground review platform with user authentication, image uploads, and MongoDB persistence.",
+    status: "Completed",
+    category: "Full-Stack",
+    gitHubLink: "https://github.com/eharel/yelp-camp",
+    liveLink: "https://yelpcamp-2qfp.onrender.com/campgrounds",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "images-projects/YelpCamp.png",
+  },
+  {
+    id: "6",
+    title: "Quizzy",
+    description:
+      "<p><strong>Quizzy</strong> is a single-page application (SPA) built with <strong>React</strong> and <strong>Vite</strong> that tests users on various subjects. It features a dynamic scoring system, a countdown timer for each question, and a progress bar for quiz tracking.</p><p>The app uses functional components and <strong>React hooks</strong> for state management, with a clean and responsive UI styled in plain CSS.</p>",
+    shortDescription:
+      "Interactive quiz application with dynamic scoring, countdown timers, and progress tracking.",
+    status: "Completed",
+    category: "Frontend",
+    gitHubLink: "https://github.com/eharel/quizzy",
+    liveLink: "https://quizzy-dun.vercel.app/",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "images-projects/quizzy.png",
+  },
+] satisfies Project[];
+
+export default projects;
