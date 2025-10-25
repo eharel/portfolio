@@ -1,4 +1,5 @@
 import type { Project, ProjectStatus } from "../types";
+import { useEffect } from "react";
 import "../style.css";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -19,8 +20,31 @@ function getStatusClass(status: ProjectStatus): string {
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   if (!project) return null; // Don't render anything if no project is selected
 
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Only close if clicking the backdrop, not the content
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener when modal opens
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener when modal closes
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
   return (
-    <div className="project-modal">
+    <div className="project-modal" onClick={handleBackdropClick}>
       <div className="project-modal-content">
         <button className="project-modal-close" onClick={onClose}>
           &times;
