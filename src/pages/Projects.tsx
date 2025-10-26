@@ -19,27 +19,29 @@ export default function Projects() {
 
   return (
     <div>
-      <h1>Projects</h1>
-      <div className="projects-container">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onClick={handleCardClick}
-          />
-        ))}
-      </div>
-
-      <div className="planned-projects-section">
-        <h2>Planned Projects</h2>
-        <div className="planned-projects-container">
-          {plannedProjects.map((project) => (
-            <PlannedProjectCard key={project.id} project={project} />
+      <section className="section" id="projects">
+        <h1>Projects</h1>
+        <div className="projects-container">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={handleCardClick}
+            />
           ))}
         </div>
-      </div>
 
-      <ProjectModal project={selectedProject} onClose={handleCloseModal} />
+        <div className="planned-projects-section">
+          <h2>Planned Projects</h2>
+          <div className="planned-projects-container">
+            {plannedProjects.map((project) => (
+              <PlannedProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+
+        <ProjectModal project={selectedProject} onClose={handleCloseModal} />
+      </section>
     </div>
   );
 }

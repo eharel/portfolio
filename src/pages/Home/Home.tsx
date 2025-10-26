@@ -7,30 +7,52 @@ export default function Home() {
     <section className="section" id="home">
       <h1 className="section-title">Hi, I'm Eli Harel</h1>
 
-      <p>
-        I'm a React developer with a strong computer science background and a
-        love for building clean, user-friendly web applications.
+      <p className={styles.intro}>
+        I'm a <strong>full-stack developer</strong> who builds production
+        applications with <strong>React</strong>, <strong>React Native</strong>,
+        <strong>TypeScript</strong>, and <strong>Firebase</strong>.
       </p>
 
       <p>
-        This site is my personal portfolio, built from scratch using{" "}
-        <strong>Vite</strong> and <strong>React</strong>, as I continue
-        sharpening my frontend development skills and grow professionally.
+        I've shipped a custom <strong>iPad app</strong> for construction project
+        managers, automated business workflows with{" "}
+        <strong>Google Apps Script</strong>, and built{" "}
+        <strong>full-stack web applications</strong> from the ground up.
       </p>
 
       <p>
-        Welcome — feel free to explore my projects, read more about me, or get
-        in touch!
+        Currently looking for opportunities to bring clean code, thoughtful
+        architecture, and real-world problem-solving to a development team.
       </p>
-      <br />
-      <div>
-        {/* <div className={styles.readingSection}> */}
+
+      <div className={styles.ctaButtons}>
+        <a href="#projects" className={styles.primaryCta}>
+          View My Work
+        </a>
+        <a href="#contact" className={styles.secondaryCta}>
+          Get in Touch
+        </a>
+        <a
+          href="/Eli_Harel_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeButton}
+        >
+          <FaRegFileAlt className={styles.buttonIcon} />
+          See My Resume
+        </a>
+      </div>
+
+      <hr className={styles.divider} />
+
+      <div className={styles.readingSection}>
         <h3>Beyond Coding</h3>
         <p>
           When I'm not coding, you'll often find me exploring new worlds through
           books. I'm particularly drawn to Fantasy, Science Fiction, and
           thought-provoking non-fiction.
         </p>
+
         <a
           href={SOCIAL_LINKS.GOODREADS.url}
           target="_blank"
@@ -40,18 +62,6 @@ export default function Home() {
         >
           <FaGoodreads className={styles.goodreadsIcon} />
           <span>See what I'm reading</span>
-        </a>
-      </div>
-
-      <div className={styles.buttonContainer}>
-        <a
-          href="/Eli_Harel_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.resumeButton}
-        >
-          <FaRegFileAlt className={styles.buttonIcon} />
-          See My Resume
         </a>
       </div>
     </section>

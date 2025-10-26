@@ -18,8 +18,6 @@ function getStatusClass(status: ProjectStatus): string {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
-  if (!project) return null; // Don't render anything if no project is selected
-
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Only close if clicking the backdrop, not the content
     if (e.target === e.currentTarget) {
@@ -27,13 +25,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     }
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-      onClose();
-    }
-  };
-
   useEffect(() => {
+    if (!project) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
     // Add event listener when modal opens
     document.addEventListener("keydown", handleKeyDown);
 
@@ -41,7 +41,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [onClose]);
+  }, [project, onClose]);
+
+  if (!project) return null; // Don't render anything if no project is selected
 
   return (
     <div className="project-modal" onClick={handleBackdropClick}>

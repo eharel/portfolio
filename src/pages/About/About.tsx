@@ -15,33 +15,36 @@ export default function About() {
         </div>
         <div>
           <p>
-            Hi, I'm <strong>Eli Harel</strong> — a frontend-focused developer
-            with a strong foundation in computer science and a deep passion for
-            building thoughtful, user-friendly web applications.
+            Hi, I'm <strong>Eli Harel</strong> — a full-stack developer
+            specializing in React and TypeScript, with experience building
+            production applications for real clients.
           </p>
 
           <p>
             Originally from Israel, I graduated <em>Magna Cum Laude</em> with a
             degree in Computer Science and recently moved to the United States.
-            Over the past couple of years, I've dedicated myself to learning
-            modern web development tools and frameworks, especially{" "}
-            <strong>React</strong>, and honing my coding skills through personal
-            projects and advanced online coursework.
+            I've spent the past couple of years mastering modern development
+            tools and frameworks — particularly <strong>React</strong>,{" "}
+            <strong>React Native</strong>, and <strong>TypeScript</strong> —
+            through both personal projects and client work.
           </p>
 
           <p>
-            While I don't yet have formal industry experience, I bring
-            discipline, curiosity, and a love for clean, maintainable code. I'm
-            currently building this site from scratch using{" "}
-            <strong>Vite</strong> and <strong>React</strong>, while continuing
-            to learn through projects and professional courses — including Jonas
-            Schmedtmann's advanced React curriculum.
+            I've built production applications including a{" "}
+            <strong>custom iPad app</strong> for ACE Remodeling's project
+            managers and an <strong>internal CRM system</strong> that automates
+            their business workflows using Google Apps Script. I love tackling
+            real-world problems with clean, maintainable code and thoughtful
+            architecture.
           </p>
 
           <p>
-            When I'm not coding, I'm likely gaming with my wife, at the gym, or
-            with a kindle on the couch, being used as a bed by a cuddly
-            chihuahua.
+            When I'm not coding,{" "}
+            <del>
+              I'm likely gaming with my wife, at the gym, or with a kindle on
+              the couch, being used as a bed by a cuddly chihuahua.
+            </del>{" "}
+            I'm changing diapers and feeding an angry, adorable baby.
           </p>
         </div>
       </div>

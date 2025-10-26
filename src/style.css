@@ -326,6 +326,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .project-modal-content {
@@ -334,8 +336,12 @@ a:hover {
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
+  max-height: 90vh;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .project-modal-close {
@@ -367,6 +373,28 @@ a:hover {
   margin: 1.5rem 0;
   color: var(--text-secondary);
   line-height: 1.6;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar for modal description */
+.project-modal-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal-description::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.project-modal-description::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.project-modal-description::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 /* Add styles for HTML elements within the description */

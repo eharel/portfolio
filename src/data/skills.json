@@ -3,15 +3,17 @@
     "name": "Frontend",
     "skills": [
       { "name": "React", "level": 90 },
-      { "name": "TypeScript", "level": 85 },
+      { "name": "React Native", "level": 85 },
+      { "name": "TypeScript", "level": 90 },
       { "name": "HTML/CSS", "level": 70 },
       { "name": "JavaScript", "level": 90 },
       { "name": "Responsive Design", "level": 85 }
     ]
   },
   "backend": {
-    "name": "Backend",
+    "name": "Backend & Cloud",
     "skills": [
+      { "name": "Firebase/Firestore", "level": 85 },
       { "name": "Node.js", "level": 80 },
       { "name": "MongoDB", "level": 75 },
       { "name": "Java", "level": 80 },
@@ -21,10 +23,11 @@
     ]
   },
   "tools": {
-    "name": "Tools & Others",
+    "name": "Tools & Platform",
     "skills": [
       { "name": "Git", "level": 90 },
-      { "name": "AI Tools (Cursor, Copilot)", "level": 85 }
+      { "name": "Expo", "level": 85 },
+      { "name": "AI Tools (Cursor, Claude)", "level": 85 }
     ]
   }
 }
