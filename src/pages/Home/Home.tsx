@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import { FaRegFileAlt, FaGoodreads } from "react-icons/fa";
 import { SOCIAL_LINKS } from "../../types/constants";
@@ -26,12 +27,12 @@ export default function Home() {
       </p>
 
       <div className={styles.ctaButtons}>
-        <a href="#projects" className={styles.primaryCta}>
+        <Link to="/projects" className={styles.primaryCta}>
           View My Work
-        </a>
-        <a href="#contact" className={styles.secondaryCta}>
+        </Link>
+        <Link to="/contact" className={styles.secondaryCta}>
           Get in Touch
-        </a>
+        </Link>
         <a
           href="/Eli_Harel_Resume.pdf"
           target="_blank"
